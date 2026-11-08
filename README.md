@@ -1,8 +1,9 @@
 # @ktbhealth/slidev-theme-ktb
 
 A [Slidev](https://sli.dev) theme that makes presentations look identical to the
-KTB Health product. It reuses the exact design tokens from
-`ktbhealth/packages/ui/src/styles/globals.css` (shadcn/Base UI theme): colors in
+KTB Health product. It reuses the exact design tokens from the
+[`ktbhealth/ui`](https://github.com/ktbhealth/ui) design system
+(`packages/tailwind/src/globals.css`, shadcn/Base UI theme): colors in
 `oklch()`, radius `0.45rem`, and the Geist / Geist Mono font stacks.
 
 Solid blue/violet primary, no purple gradients, no emerald accents.
