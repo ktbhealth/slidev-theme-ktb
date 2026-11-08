@@ -1,0 +1,44 @@
+{
+	"name": "@ktbhealth/slidev-theme-ktb",
+	"version": "0.1.0",
+	"description": "Slidev theme for KTB Health presentations, matching the KTB design system",
+	"license": "MIT",
+	"type": "module",
+	"keywords": [
+		"slidev-theme",
+		"slidev"
+	],
+	"engines": {
+		"node": ">=20.0.0",
+		"slidev": ">=0.49.0"
+	},
+	"exports": {
+		"./tokens": "./src/tokens.ts",
+		"./setup/unocss": "./setup/unocss.ts"
+	},
+	"slidev": {
+		"colorSchema": "both",
+		"defaults": {
+			"fonts": {
+				"sans": "Geist",
+				"mono": "Geist Mono",
+				"provider": "google",
+				"weights": "200,400,500,600,700"
+			}
+		}
+	},
+	"scripts": {
+		"test": "vitest run",
+		"dev": "slidev example.md --open",
+		"build": "slidev build example.md",
+		"export": "slidev export example.md"
+	},
+	"devDependencies": {
+		"@slidev/cli": "^53.1.0",
+		"@slidev/types": "^53.1.0",
+		"@types/node": "^26.6.6",
+		"typescript": "^5.9.0",
+		"vitest": "^3.2.0"
+	},
+	"packageManager": "bun@1.4.4"
+}

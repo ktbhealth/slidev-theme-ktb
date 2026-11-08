@@ -1,0 +1,154 @@
+/*
+ * slidev-theme-ktb
+ *
+ * Maps the KTB Health design tokens (packages/ui/src/styles/globals.css)
+ * onto Slidev's theming surface:
+ *
+ *   --ktb-*            raw KTB tokens, available to custom slide CSS
+ *   --slidev-theme-*   Slidev theme variables consumed by core shortcuts
+ *                      (bg-primary, text-primary, border-primary, ...)
+ *   --slidev-code-*    code block / inline code styling
+ *
+ * Semantic colors (bg-main, text-main, border-main) are remapped to the
+ * --ktb-* variables in setup/unocss.ts.
+ */
+
+:root {
+	color-scheme: light;
+
+	/* KTB tokens: light scheme (values from globals.css :root) */
+	--ktb-background: oklch(1 0 0);
+	--ktb-foreground: oklch(0.32 0 0);
+	--ktb-card: oklch(1 0 0);
+	--ktb-card-foreground: oklch(0.32 0 0);
+	--ktb-popover: oklch(1 0 0);
+	--ktb-popover-foreground: oklch(0.32 0 0);
+	--ktb-primary: oklch(0.62 0.11 259.02);
+	--ktb-primary-foreground: oklch(1 0 0);
+	--ktb-secondary: oklch(0.97 0 0);
+	--ktb-secondary-foreground: oklch(0.45 0.03 257.68);
+	--ktb-muted: oklch(0.98 0 0);
+	--ktb-muted-foreground: oklch(0.55 0.02 264.41);
+	--ktb-accent: oklch(0.95 0.03 233.56);
+	--ktb-accent-foreground: oklch(0.38 0.14 265.59);
+	--ktb-destructive: oklch(0.64 0.21 25.39);
+	--ktb-border: oklch(0.93 0.01 261.82);
+	--ktb-input: oklch(0.93 0.01 261.82);
+	--ktb-ring: oklch(0.62 0.11 259.02);
+	--ktb-radius: 0.45rem;
+
+	/* Slidev-facing variables */
+	--slidev-theme-primary: var(--ktb-primary);
+	--slidev-theme-primary-foreground: var(--ktb-primary-foreground);
+	--slidev-theme-background: var(--ktb-background);
+	--slidev-theme-foreground: var(--ktb-foreground);
+	--slidev-theme-muted: var(--ktb-muted);
+	--slidev-theme-muted-foreground: var(--ktb-muted-foreground);
+	--slidev-theme-accent: var(--ktb-accent);
+	--slidev-theme-border: var(--ktb-border);
+	--slidev-theme-destructive: var(--ktb-destructive);
+	--slidev-theme-radius: var(--ktb-radius);
+
+	/* Code surface */
+	--slidev-code-background: var(--ktb-muted);
+	--slidev-code-foreground: var(--ktb-foreground);
+	--slidev-code-font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	--slidev-code-radius: var(--ktb-radius);
+
+	/* Typography, matching globals.css */
+	--ktb-font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+	--ktb-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html.dark {
+	color-scheme: dark;
+
+	/* KTB tokens: dark scheme (values from globals.css .dark) */
+	--ktb-background: oklch(0.2 0 0);
+	--ktb-foreground: oklch(0.92 0 0);
+	--ktb-card: oklch(0.27 0 0);
+	--ktb-card-foreground: oklch(0.92 0 0);
+	--ktb-popover: oklch(0.27 0 0);
+	--ktb-popover-foreground: oklch(0.92 0 0);
+	--ktb-primary: oklch(0.62 0.19 259.76);
+	--ktb-primary-foreground: oklch(1 0 0);
+	--ktb-secondary: oklch(0.27 0 0);
+	--ktb-secondary-foreground: oklch(0.92 0 0);
+	--ktb-muted: oklch(0.27 0 0);
+	--ktb-muted-foreground: oklch(0.72 0 0);
+	--ktb-accent: oklch(0.38 0.14 265.59);
+	--ktb-accent-foreground: oklch(0.88 0.06 254.63);
+	--ktb-destructive: oklch(0.64 0.21 25.39);
+	--ktb-border: oklch(0.37 0 0);
+	--ktb-input: oklch(0.37 0 0);
+	--ktb-ring: oklch(0.62 0.19 259.76);
+	--ktb-radius: 0.45rem;
+}
+
+/*
+ * Slidev toggles the `dark` class on <html>. Mirror the product heading
+ * scale from globals.css: Geist, tight tracking, 600/700 weights.
+ * These rules load after layouts-base.css so they win at equal specificity.
+ */
+.slidev-layout {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--ktb-font-sans);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		line-height: 1.15;
+		letter-spacing: -0.025em;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 1.875rem;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		letter-spacing: -0.015em;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		font-weight: 500;
+	}
+
+	h5 {
+		font-size: 1.125rem;
+		line-height: 1.5;
+		font-weight: 500;
+	}
+
+	h6 {
+		font-size: 1rem;
+		line-height: 1.5;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+
+	code,
+	pre {
+		font-family: var(--ktb-font-mono);
+	}
+}
+
+.slidev-layout blockquote {
+	border-left-color: var(--ktb-primary);
+}
