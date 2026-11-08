@@ -40,5 +40,8 @@
 		"typescript": "^5.9.0",
 		"vitest": "^3.2.0"
 	},
-	"packageManager": "bun@1.4.4"
+	"packageManager": "bun@1.4.4",
+	"dependencies": {
+		"@ktbhealth/ui": "github:ktbhealth/ui#v0.1.0@tailwind"
+	}
 }

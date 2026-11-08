@@ -17,25 +17,6 @@
 	color-scheme: light;
 
 	/* KTB tokens: light scheme (values from globals.css :root) */
-	--ktb-background: oklch(1 0 0);
-	--ktb-foreground: oklch(0.32 0 0);
-	--ktb-card: oklch(1 0 0);
-	--ktb-card-foreground: oklch(0.32 0 0);
-	--ktb-popover: oklch(1 0 0);
-	--ktb-popover-foreground: oklch(0.32 0 0);
-	--ktb-primary: oklch(0.62 0.11 259.02);
-	--ktb-primary-foreground: oklch(1 0 0);
-	--ktb-secondary: oklch(0.97 0 0);
-	--ktb-secondary-foreground: oklch(0.45 0.03 257.68);
-	--ktb-muted: oklch(0.98 0 0);
-	--ktb-muted-foreground: oklch(0.55 0.02 264.41);
-	--ktb-accent: oklch(0.95 0.03 233.56);
-	--ktb-accent-foreground: oklch(0.38 0.14 265.59);
-	--ktb-destructive: oklch(0.64 0.21 25.39);
-	--ktb-border: oklch(0.93 0.01 261.82);
-	--ktb-input: oklch(0.93 0.01 261.82);
-	--ktb-ring: oklch(0.62 0.11 259.02);
-	--ktb-radius: 0.45rem;
 
 	/* Slidev-facing variables */
 	--slidev-theme-primary: var(--ktb-primary);
@@ -69,25 +50,6 @@ html.dark {
 	color-scheme: dark;
 
 	/* KTB tokens: dark scheme (values from globals.css .dark) */
-	--ktb-background: oklch(0.2 0 0);
-	--ktb-foreground: oklch(0.92 0 0);
-	--ktb-card: oklch(0.27 0 0);
-	--ktb-card-foreground: oklch(0.92 0 0);
-	--ktb-popover: oklch(0.27 0 0);
-	--ktb-popover-foreground: oklch(0.92 0 0);
-	--ktb-primary: oklch(0.62 0.19 259.76);
-	--ktb-primary-foreground: oklch(1 0 0);
-	--ktb-secondary: oklch(0.27 0 0);
-	--ktb-secondary-foreground: oklch(0.92 0 0);
-	--ktb-muted: oklch(0.27 0 0);
-	--ktb-muted-foreground: oklch(0.72 0 0);
-	--ktb-accent: oklch(0.38 0.14 265.59);
-	--ktb-accent-foreground: oklch(0.88 0.06 254.63);
-	--ktb-destructive: oklch(0.64 0.21 25.39);
-	--ktb-border: oklch(0.37 0 0);
-	--ktb-input: oklch(0.37 0 0);
-	--ktb-ring: oklch(0.62 0.19 259.76);
-	--ktb-radius: 0.45rem;
 }
 
 /*
