@@ -190,17 +190,23 @@ body,
 	padding: 1.25rem 1.5rem;
 }
 
+/* Matches the product's shadcn Badge (secondary variant):
+   h-5 rounded-full border px-2 py-0.5 text-xs font-medium. */
 .ktb-chip {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.375rem;
-	background: color-mix(in oklch, var(--ktb-primary) 10%, transparent);
-	color: var(--ktb-primary);
-	border: 1px solid color-mix(in oklch, var(--ktb-primary) 20%, transparent);
-	border-radius: 9999px;
-	padding: 0.125rem 0.75rem;
-	font-size: 0.8rem;
+	justify-content: center;
+	gap: 0.25rem;
+	height: 1.25rem;
+	padding: 0 0.5rem;
+	font-size: 0.75rem;
 	font-weight: 500;
+	line-height: 1;
+	white-space: nowrap;
+	background: var(--ktb-secondary);
+	color: var(--ktb-secondary-foreground);
+	border: 1px solid transparent;
+	border-radius: 9999px;
 }
 
 .ktb-muted-band {
