@@ -208,3 +208,45 @@ body,
 	border-radius: var(--ktb-radius);
 	padding: 1rem 1.25rem;
 }
+
+/* Eyebrow label above section titles, like the site's badge headers. */
+.ktb-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--ktb-primary);
+	margin-bottom: 0.75rem;
+}
+.ktb-eyebrow::before {
+	content: "";
+	display: inline-block;
+	width: 1.5rem;
+	height: 2px;
+	background: var(--ktb-primary);
+	border-radius: 1px;
+}
+
+/* Inverted CTA band, matching the site's closing section. */
+.ktb-cta {
+	background: var(--ktb-primary);
+	color: var(--ktb-primary-foreground);
+	border-radius: calc(var(--ktb-radius) * 1.4);
+	padding: 2rem 2.5rem;
+}
+.ktb-cta a,
+.ktb-cta .text-primary {
+	color: var(--ktb-primary-foreground);
+}
+
+/* Primary bullet markers, like the product's accent lists. */
+.slidev-layout li::marker {
+	color: var(--ktb-primary);
+}
+
+::selection {
+	background: color-mix(in oklch, var(--ktb-primary) 20%, transparent);
+}
