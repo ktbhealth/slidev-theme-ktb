@@ -35,4 +35,4 @@ class: text-center
 
 # Thanks
 
-KTB Health telemedicine
+KTB Health documentation platform

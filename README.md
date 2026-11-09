@@ -10,13 +10,19 @@ Solid blue/violet primary, no purple gradients, no emerald accents.
 
 ## Usage
 
-Install the theme in your slides project:
+The package is not published to npm yet — install it as a git dependency,
+pinned to a tag or commit:
 
-```bash
-npm i @ktbhealth/slidev-theme-ktb
-# or
-bun add @ktbhealth/slidev-theme-ktb
+```json
+{
+	"devDependencies": {
+		"@ktbhealth/slidev-theme-ktb": "github:ktbhealth/slidev-theme-ktb#<tag-or-commit>"
+	}
+}
 ```
+
+Once published to npm, the registry specifier `npm i @ktbhealth/slidev-theme-ktb`
+will work too.
 
 Then set the theme in the frontmatter of `slides.md`. Because the package is
 scoped, the full package name is required:
